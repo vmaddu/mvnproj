@@ -10,6 +10,7 @@ pipeline{
 			sh 'mvn --version'
 			echo "--------------------"
 			}
+		}
 		stage('mvn_compile'){
 			steps{
 				sh 'mvn compile'
@@ -25,5 +26,5 @@ pipeline{
 				sh 'mvn install'
 			}
 		}
-    }
+    	}
     }

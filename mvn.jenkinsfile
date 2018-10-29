@@ -6,9 +6,9 @@ pipeline{
 	stages{
 		stage('mvn_version'){
 			steps{
-			echo --------------------
+			echo "--------------------"
 			sh 'mvn --version'
-			echo --------------------
+			echo "--------------------"
 			}
 		stage('mvn_compile'){
 			steps{

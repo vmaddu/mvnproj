@@ -4,9 +4,25 @@ pipeline{
 	maven 'Maven_3.5.4'
 	}
 	stages{
+		stage('mvn_version'){
+			steps{
+			echo --------------------
+			sh 'mvn --version'
+			echo --------------------
+			}
 		stage('mvn_compile'){
 			steps{
 				sh 'mvn compile'
+			}
+		}
+		stage('mvn_package'){
+			steps{
+				sh 'mvn package'
+			}
+		}
+		stage('mvn_install'){
+			steps{
+				sh 'mvn install'
 			}
 		}
     }
